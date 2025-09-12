@@ -6,8 +6,11 @@ on:
     - cron: "0 1 * * *" 
     - cron: "0 5 * * *"
     - cron: "0 13 * * *"
+    - cron: "0 15 * * *"
     - cron: "0 17 * * *"
+    - cron: "0 19 * * *"
     - cron: "0 21 * * *"
+    - cron: "0 23 * * *"
  
   push:
     branches:
@@ -31,9 +34,9 @@ jobs:
           outputs: |
             dist/github-snake.svg?color_snake=black
             dist/github-snake-dark.svg?palette=github-dark
-            dist/github-snake-pink.svg?color_snake=black&color_dots=#e6e9ed,#FFDBFE,#FE99F7,#FD56F0,#FC14E9 
-            dist/github-snake-blue.svg?color_snake=black&color_dots=#e6e9ed,#C5D0FA,#99AFFE,#567DFD,#144AFC
-            dist/github-snake-purple.svg?color_snake=black&color_dots=#e6e9ed,#FADBFF,#DC99FE,#BE56FD,#A014FC
+            dist/github-snake-pink.svg?color_snake=black&color_dots=#e6e9ed,#FFD2EF,#FFA2E8,#FF71DB,#FC4CD0 
+            dist/github-snake-blue.svg?color_snake=black&color_dots=#e6e9ed,#C5D0FA,#99AFFE,#567DFD,#2558FF
+            dist/github-snake-purple.svg?color_snake=black&color_dots=#e6e9ed,#D8A9FF,#C28DFF,#AC64FF,#8F33FF
 
       - name: commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
