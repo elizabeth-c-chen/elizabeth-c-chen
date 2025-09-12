@@ -35,8 +35,8 @@ jobs:
             dist/github-snake.svg?color_snake=black
             dist/github-snake-dark.svg?palette=github-dark
             dist/github-snake-pink.svg?color_snake=black&color_dots=#e6e9ed,#FFD2EF,#FFA2E8,#FF71DB,#FC4CD0 
-            dist/github-snake-blue.svg?color_snake=black&color_dots=#e6e9ed,#C5D0FA,#99AFFE,#567DFD,#2558FF
-            dist/github-snake-purple.svg?color_snake=black&color_dots=#e6e9ed,#D8A9FF,#C28DFF,#AC64FF,#8F33FF
+            dist/github-snake-blue.svg?color_snake=black&color_dots=#e6e9ed,#C5D0FA,#99AFFE,#567DFD,#3D6AFF
+            dist/github-snake-purple.svg?color_snake=black&color_dots=#e6e9ed,#E2C3FB,#C28DFF,#AC64FF,#8F33FF
 
       - name: commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
