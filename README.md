@@ -1,7 +1,6 @@
-#### welcome to my page!
-
+# heyo!
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="github-snake-pink.gif" />
-  <img src="github-snake-pink.gif" />
+  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake-pink.svg" />
+  <img src="dist/github-snake-pink.svg" />
 </picture>

@@ -1,23 +1,27 @@
 name: generate snake animation
 
 on:
-
-  schedule:
-    - cron: "0 0 * * *"
   workflow_dispatch:
-  
+  schedule:
+    - cron: "0 1 * * *" 
+    - cron: "0 5 * * *"
+    - cron: "0 13 * * *"
+    - cron: "0 17 * * *"
+    - cron: "0 21 * * *"
+ 
   push:
     branches:
-    - master
-  
+      - master
+
 jobs:
   generate:
-    permissions: 
+    permissions:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
+
     steps:
-       - name: Checkout Repository
+      - name: checkout repository 
         uses: actions/checkout@v4
 
       - name: generate github-contribution-grid-snake.svg
@@ -25,14 +29,16 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg
+            dist/github-snake.svg?color_snake=black
             dist/github-snake-dark.svg?palette=github-dark
-            dist/github-snake-pink.gif?color_snake=blue&color_dots=#fcd9fa,#fabbe3,#f895da,#f76cd0,#f542e6
+            dist/github-snake-pink.svg?color_snake=black&color_dots=#e6e9ed,#FFDBFE,#FE99F7,#FD56F0,#FC14E9 
+            dist/github-snake-blue.svg?color_snake=black&color_dots=#e6e9ed,#C5D0FA,#99AFFE,#567DFD,#144AFC
+            dist/github-snake-purple.svg?color_snake=black&color_dots=#e6e9ed,#FADBFF,#DC99FE,#BE56FD,#A014FC
 
       - name: commit and push changes
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          target_branch: master
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: update contribution snake animation"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
