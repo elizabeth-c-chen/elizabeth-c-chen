@@ -5,7 +5,7 @@
 </picture>
 
 ## hello! i'm elizabeth :) 
-i'm a senior data engineer at spring & bond. 
+i'm a senior data engineer at real chemistry. 
 
 i studied applied math (a.b.) and data science (sc.m.) at brown university. 
 
